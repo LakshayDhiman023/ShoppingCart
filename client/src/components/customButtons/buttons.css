@@ -1,0 +1,56 @@
+.ButtonCollection{
+    display: flex;
+    position: relative;
+    right: 0%;
+    margin: 0rem 15rem 0rem 0rem ;
+}
+
+.Login{
+    background-color: white;
+    color: #2874f0;
+    border-radius: 2px solid #2874f0;
+    position: absolute;
+    right: 270px;
+    top: -17px;
+    width: 100px;
+}
+
+.Seller{
+    color: #fff;
+    position: absolute;
+    width: 120px;
+    right: 95px;
+    top: -10px;
+    /* margin-right: 5px; */
+}
+
+.Cart{
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    
+    
+}
+
+.username{
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    
+    position: absolute;
+    right: 270px;
+    top: -10px;
+    
+}
+
+.logout{
+    display: none;
+    position: absolute;
+    right: 250px;
+    top: 15px;
+}
+
+.Login :hover .logout{
+    display: block;
+}

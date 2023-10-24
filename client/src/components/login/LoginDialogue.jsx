@@ -30,16 +30,8 @@ function LoginDialogue({open, setOpen}) {
       setSignup({...signup, [e.target.name]:e.target.value}) 
     }
     const { setAccount } = useContext(DataContext);
-    const signupUser = async()=>{
-      let respone = await authenticateSignup(signup);
-      if(!respone)return
-      handleClose();
-      // console.log(signupUser.firstname);
-      setAccount(signup.username);
-      
-    }
-
-
+    
+    
     const accountInitialValues = {
       login: {
         view: "login",
@@ -56,7 +48,7 @@ function LoginDialogue({open, setOpen}) {
       username:'', 
       password:''
     }
-
+    
     const [ account, toggleAccount] = useState(accountInitialValues.login)
     const [signup, setSignup] = useState(signUpInitialValue); 
     const [login, setLogin] = useState(loginInitialValues);
@@ -67,14 +59,30 @@ function LoginDialogue({open, setOpen}) {
     const onValueChange = (e) =>{
       setLogin({...login ,[e.target.name]: e.target.value})
     }
-
+    const signupUser = async()=>{
+      console.log(signup);
+      let respone = await authenticateSignup(signup);
+      // console.log(respone);
+      // if(respone.status!==200)return;
+      // console.log(signup.username);
+      setAccount(signup.username);
+      handleClose();
+      
+      // console.log(signup.username);
+      
+    }
+    
     const loginUser = async()=>{
       // console.log(login);
-      let response = await authenticateLogin(login);
-      if(response.status===200){
-        handleClose();
 
-        setAccount(response.data.data.username)
+      let response = await authenticateLogin(login);
+      // console.log(login);
+      // console.log(response);
+      if(response.status===200){
+        setAccount(response.data.data.username);
+        handleClose();
+        console.log(response.data.data.username);
+        
       }
       else{
         

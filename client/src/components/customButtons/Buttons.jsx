@@ -18,6 +18,7 @@ function Buttons() {
     <div className="ButtonCollection">
       {
         account? <Profile account={account} setAccount={setAccount}/> 
+        // account? 'hello'
         :
         <>
         <button type="button" onClick = {()=>openDialog()} className="Login btn btn-primary">Login</button>

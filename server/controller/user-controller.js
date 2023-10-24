@@ -28,6 +28,9 @@ export const userLogin = async(request, response) =>{
         const username = request.body.username;
         const password = request.body.password;
         // console.log('bye');
+        console.log("hleodfjskfak");
+        // User.deleteMany({});
+        
         let user = await User.findOne({username:username, password: password})
         // console.log('hello');
         if(user){

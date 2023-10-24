@@ -46,7 +46,7 @@ const Profile = ({account, setAccount}) =>{
           >
             <PowerSettingsNewIcon color='primary' fontSize='small' cusror/>
             <Logout>Logout</Logout>
-          </MenuItem>{" "}
+          </MenuItem>
         </Component>
       </>
     );

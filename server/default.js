@@ -1,14 +1,18 @@
-import { products } from "./constants/data.js";
-import Product from "./model/product-schema.js";
 
-const DefaultData = async() => {
-  try {
-    
-    await Product.insertMany(products);   
-    console.log("Successfully inserted default data");
-  } catch (error) {
-    console.log("Error while importing default data", error.message); // Corrected this line
-  }
-};
+
+import Product from './model/productSchema.js';
+import { products } from './constants/product.js';
+
+const DefaultData = async () => {
+    try {
+        await Product.deleteMany({});
+        await Product.insertMany(products);
+
+        console.log('Data imported Successfully');
+        
+    } catch (error) {
+        console.log('Error: ', error.message);
+    }
+}
 
 export default DefaultData;

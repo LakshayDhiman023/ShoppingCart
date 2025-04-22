@@ -3,7 +3,7 @@ import { Home, NotFound } from './Components/default';
 import { Box } from '@mui/material'
 
 //components
-import Header from './Components/Header/Header';
+import Header from './Components/header/Header';
 import DetailView from './Components/ItemDetails/DetailView';
 import TemplateProvider from './templates/TemplateProvider';
 import ContextProvider from './context/ContextProvider';

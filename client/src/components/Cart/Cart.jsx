@@ -88,7 +88,7 @@ const Cart = () => {
                             ))
                         }
                     <BottomWrapper>
-                        <StyledButton onClick={() => buyNow()} variant="contained">Place Order</StyledButton>
+                        <StyledButton onClick={() => alert("not implemented yet!!")} variant="contained">Place Order</StyledButton>
                     </BottomWrapper>
                 </LeftComponent>
                 <Grid item lg={3} md={3} sm={12} xs={12}>
